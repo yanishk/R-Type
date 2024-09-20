@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2024
-** bs
+** B-CPP-500-PAR-5-1-rtype-yanis.harkouk
 ** File description:
 ** Container
 */
@@ -31,8 +31,8 @@ class sparse_array {
         sparse_array(sparse_array &&) noexcept = default;
         ~sparse_array() = default;
 
-        sparse_array & operator=(sparse_array const &) = default;
-        sparse_array & operator=(sparse_array &&) noexcept = default;
+        sparse_array &operator=(sparse_array const &) = default;
+        sparse_array &operator=(sparse_array &&) noexcept = default;
 
         reference_type operator[](size_t idx) {
             return _data[idx];
