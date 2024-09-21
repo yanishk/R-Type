@@ -1,4 +1,4 @@
-/*
+        /*
 ** EPrtypeTECH PROJECT, 2024
 ** B-OOP-400-PAR-4-1-arcade-yanis.harkouk
 ** File description:
@@ -14,6 +14,7 @@
     #include "CollisionSystem.hpp"
     #include "LifeSystem.hpp"
     #include "DrawSystem.hpp"
+    #include "FiringSystem.hpp"
 
 namespace game
 {
@@ -80,6 +81,7 @@ namespace game
                 _reg.addSystem(ecs::system::PositionSystem());
                 _reg.addSystem(ecs::system::CollisionSystem());
                 _reg.addSystem(ecs::system::LifeSystem());
+                _reg.addSystem(ecs::system::FiringSystem());
                 _reg.addSystem(ecs::system::DrawSystem());
             };
 
