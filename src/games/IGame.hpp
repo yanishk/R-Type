@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2024
-** B-OOP-400-PAR-4-1-arcade-yanis.harkouk
+** B-CPP-500-PAR-5-1-rtype-yanis.harkouk
 ** File description:
 ** IGame
 */
@@ -22,6 +22,7 @@ namespace game
             virtual void addComponentsToEntities() = 0;
             virtual void addSystemsToRegister() = 0;
             virtual ecs::Registry &getRegister() = 0;
+            virtual std::string &getGameName() = 0;
     };
 }
 
