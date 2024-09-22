@@ -1,6 +1,6 @@
 /*
-** EPATECH PROJECT, 2024
-** B-OOP-400-PAR-4-1-arcade-yanis.harkouk
+** EPITECH PROJECT, 2024
+** B-CPP-500-PAR-5-1-rtype-yanis.harkouk
 ** File description:
 ** AGame
 */
