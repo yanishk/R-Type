@@ -1,0 +1,38 @@
+/*
+** EPITECH PROJECT, 2024
+** B-CPP-500-PAR-5-1-rtype-yanis.harkouk
+** File description:
+** SpriteAnimationSystem
+*/
+
+#include "SpriteAnimationSystem.hpp"
+
+#define SPRITE_UPDATE_TIME 0.1
+
+void ecs::system::SpriteAnimationSystem::operator()(Registry &reg)
+{
+    SparseArray<component::Drawable> &drawables = reg.getComponents<component::Drawable>();
+    static double time0 = GetTime();
+    double time1 = GetTime();
+    double timeElapsed = time1 - time0;
+    float offset = 0.0;
+    float firstPatternLocation = 0.0;
+
+    for (std::size_t i = 0; i < drawables.size(); ++i) {
+        if (drawables[i]) {
+            if (!drawables[i]->isLoaded)
+                continue;
+            if (timeElapsed >= SPRITE_UPDATE_TIME) {
+                offset = float(drawables[i]->spriteTexture.width)/drawables[i]->patternNb;
+                firstPatternLocation = drawables[i]->firstPattern * offset;
+                if (drawables[i]->spriteRect.x + offset == float(drawables[i]->spriteTexture.width)) {
+                    drawables[i]->spriteRect.x = firstPatternLocation;
+                } else {
+                    drawables[i]->spriteRect.x += offset;
+                }
+            }
+        }
+    }
+    if (timeElapsed >= SPRITE_UPDATE_TIME)
+        time0 = GetTime();
+}
