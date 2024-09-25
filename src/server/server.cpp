@@ -1,3 +1,10 @@
+/*
+** EPITECH PROJECT, 2024
+** B-CPP-500-PAR-5-1-rtype-yanis.harkouk
+** File description:
+** server
+*/
+
 #include <array>
 #include <ctime>
 #include <functional>
