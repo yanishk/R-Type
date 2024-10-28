@@ -28,7 +28,7 @@ jobs:
 
       - name: set remote repo
         run: |
-          git remote add origin-test git@github.com:Willarcade/TEST-rtype-mirror.git
+          git remote add origin-test git@github.com:EpitechPromo2027/B-CPP-500-PAR-5-1-rtype-yanis.harkouk.git
           git remote -v
 
           BRANCH_NAME=${{ github.event.pull_request.base.ref }}
