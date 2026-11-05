@@ -1,3 +1,12 @@
 r-type_server
 vcpkg
 html
+*.mov
+gameplay-highlights.mp4
+NOTE-claude-code.md
+build/
+rtype_client
+rtype_server
+sharedLibraries/*.dylib
+sharedLibraries/*.so
+.DS_Store
